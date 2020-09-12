@@ -20,6 +20,7 @@ app.use((req,res,next)=>{
     res.header();
 })
 
+
 //rutas base
 app.use('/api', user_routes);
 app.use('/api', artist_routes);
