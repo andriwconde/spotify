@@ -1,9 +1,9 @@
 'use strict'
 var mongoose = require('mongoose');
 mongoose.set('useFindAndModify', false);
+mongoose.Promise = global.Promise;
 var app = require('./app');
 var port = process.env.PORT|| 3977;
-mongoose.Promise = global.Promise;
 
 mongoose.connect('mongodb://localhost:27017/spotify', {useNewUrlParser:true, useUnifiedTopology: true}, (err, res) => {
     if(err){
